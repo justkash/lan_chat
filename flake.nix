@@ -7,7 +7,7 @@
     utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { nixpkgs, utils }: utils.lib.eachDefaultSystem (system:
+  outputs = { self, nixpkgs, utils }: utils.lib.eachDefaultSystem (system:
     let
       version = "0.1.0";
       pname = "lan-chat";
